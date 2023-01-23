@@ -41,6 +41,7 @@ public class FileServiceImpl implements FileService {
     public File getDataFile() {
         return new File(fileDataPath + "/" + fileDataName);
     }
+
     @Override
     public boolean cleanDataFileSocks() {
         try {
@@ -52,6 +53,7 @@ public class FileServiceImpl implements FileService {
             throw new RuntimeException(e);
         }
     }
+
     @Override
     public Path CreateTempFile(String suffix) {
         try {

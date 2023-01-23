@@ -23,7 +23,7 @@ public class SocksCotroller {
     }
 
     @PostMapping("/add")
-    @Operation(summary = "Добавить носки на склад",description = "Добавить на склад")
+    @Operation(summary = "Добавить носки на склад", description = "Добавить на склад")
     @ApiResponse(responseCode = "200", description = "Удалось добавить приход")
     @ApiResponse(responseCode = "400", description = "Параметры запроса отсутствуют или имеют некорректный формат")
     @ApiResponse(responseCode = "500", description = "Произошла ошибка, не зависящая от вызывающей стороны")
@@ -64,7 +64,7 @@ public class SocksCotroller {
             "параметры запроса имеют некорректный формат")
     @ApiResponse(responseCode = "500", description = "Произошла ошибка, не зависящая от вызывающей стороны")
 
-    public ResponseEntity<?> take(@RequestBody SockItem sockItem){
+    public ResponseEntity<?> take(@RequestBody SockItem sockItem) {
         sockService.put(sockItem);
         return ResponseEntity.ok().build();
     }

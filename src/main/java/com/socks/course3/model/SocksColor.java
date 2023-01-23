@@ -13,10 +13,11 @@ public enum SocksColor {
     BLUE("синий"),
     PURPLE("фиолетовый");
     private String color;
+
     @Nullable
-    public static SocksColor parse(String color){
-        for (SocksColor c : values()){
-            if (c.name().equals(color)){
+    public static SocksColor parse(String color) {
+        for (SocksColor c : values()) {
+            if (c.name().equals(color)) {
                 return c;
             }
         }
