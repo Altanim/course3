@@ -16,19 +16,22 @@ public enum SocksSize {
     XXL(44);
 
     @Nullable
-    public static SocksSize parse(int size){
-        for (SocksSize s : values()){
-            if (Integer.compare(s.size, size) == 0){
+    public static SocksSize parse(int size) {
+        for (SocksSize s : values()) {
+            if (Integer.compare(s.size, size) == 0) {
                 return s;
             }
         }
         return null;
     }
+
     private int size;
+
     SocksSize(int size) {
         this.size = size;
     }
-@JsonValue
+
+    @JsonValue
     public int getSize() {
         return size;
     }
